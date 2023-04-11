@@ -1,0 +1,17 @@
+.product {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+  .product-img {
+    width: 250px;
+  }
+
+.cont{
+  width: 100%;
+}

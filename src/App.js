@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
+import ProductList from './components/productList/ProductList';
+import Navbar from './components/navbar/Navbar'
 import './App.css';
 
 function App() {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const handleFilterClick = (filter) => {
+    setActiveFilter(filter);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar activeFilter={activeFilter} onFilterClick={handleFilterClick} />
+      <ProductList activeFilter={activeFilter} />
     </div>
   );
 }
